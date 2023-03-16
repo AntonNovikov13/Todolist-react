@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(90deg, #faf0cd, #fab397);
+}
+
+.title {
+    font-size: 24px;
+    text-align: center;
+}
+
+.amount-tasks {
+    margin: 0;
+    padding: 0 auto;
+    margin: auto;
+    width: 50%;
+}
+
+.amount-tasks_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    border-radius: 8px;
+    background-color: #0abda0;
+    margin-bottom: 12px;
+    padding: 8px;
+    font-size: 20px;
+}
+
+.todo-list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 32px;
+    background-color: silver;
+    border-radius: 8px;
+    padding: 8px;
+    max-width: 650px;
+    margin: auto;
+}
+
+.list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    margin: auto;
+    width: 100%;
+}
+
+.list-item {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    border-radius: 8px;
+    background-color: #0abda0;
+    margin-bottom: 8px;
+    padding: 8px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &__done {
+        opacity: 0.7;
+    }
+
+    &__checkbox {
+        margin-right: 8px;
+    }
+
+    &__delete-btn {
+        width: 25px;
+        height: 25px;
+        background-color: silver;
+        border: 1px solid transparent;
+        border-radius: 50%;
+        outline: none;
+        cursor: pointer;
+        border: none;
+        margin-left: auto;
+        text-decoration: none;
+        padding: 0;
+        transform: rotate(45deg);
+        font-size: 18px;
+        line-height: 24px;
+        text-align: center;
+        opacity: 0.7;
+
+        &::before {
+            content: '+';
+        }
+    }
+}
+
+.create-task {
+    display: flex;
+    margin-bottom: 8px;
+
+    &__input {
+        height: 32px;
+        border: 3px solid #ccc;
+        border-radius: 8px;
+        flex: 1;
+        outline: none;
+    }
+    &__input:focus {
+        border: 3px solid #0abda0;
+    }
+}
+.create-task__btn {
+    height: 32px;
+    min-width: 64px;
+    background-color: gold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 16px;
+    outline: none;
+}
+.create-task__btn:active {
+    border: 3px solid #0abda0;
+}
