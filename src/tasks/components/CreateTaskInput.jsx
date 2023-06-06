@@ -12,7 +12,8 @@ class CreateTaskInput extends Component {
         });
     };
 
-    handleCreate = () => {
+    handleCreate = (e) => {
+        e.preventDefault()
         this.props.onCreate(
             this.state.value.length <= 0 || this.state.value === ''
                 ? this.setState({
@@ -28,7 +29,7 @@ class CreateTaskInput extends Component {
 
     render() {
         return (
-            <div className='create-task'>
+            <form className='create-task'>
                 <input
                     type='text'
                     className='create-task__input'
@@ -42,7 +43,7 @@ class CreateTaskInput extends Component {
                 >
                     Create
                 </button>
-            </div>
+            </form>
         );
     }
 }
